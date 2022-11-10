@@ -13,17 +13,17 @@ function About() {
                             Get started by signing up for a free account.
                         </h2>
                         <img 
-                            //src="" 
+                            src="https://res.cloudinary.com/drkesmfbk/image/upload/v1668048852/Screen_Shot_2022-11-09_at_6.50.29_PM_yowszk.png" 
                             alt="Sign-up form" 
                         />
 
-                        <h2>
-                            Look up your favorite organizations on the this page.
-                        </h2>
-                        <img 
-                            //src="" 
-                            alt="Overview page" 
-                        />
+//                         <h2>
+//                             Look up your favorite organizations on the this page.
+//                         </h2>
+//                         <img 
+//                             //src="" 
+//                             alt="Overview page" 
+//                         />
 
 
                     </div>
@@ -41,7 +41,7 @@ function About() {
                         rel="noreferrer"
                     >
                         <img 
-                            src="https://imgur.com/bBaCmqP" 
+                            src="https://res.cloudinary.com/drkesmfbk/image/upload/v1667971925/me_copy_pctdmh.jpg" 
                             alt="GitHub logo"
                         />
                     </a>
@@ -55,7 +55,7 @@ function About() {
                         rel="noreferrer"
                     >
                         <img 
-                            src="https://imgur.com/wYMx7Kg" 
+                            src="https://res.cloudinary.com/drkesmfbk/image/upload/v1667971926/Peerless_Headshots_-13_copy_zjsuhi.jpg" 
                             alt="GitHub logo"
                         />
                     </a>
@@ -69,7 +69,7 @@ function About() {
                         rel="noreferrer"
                     >
                         <img 
-                            src="https://imgur.com/xu4Slax" 
+                            src="https://res.cloudinary.com/drkesmfbk/image/upload/v1667971925/pfp_copy_zsgue6.jpg" 
                             alt="GitHub logo"
                         />
                     </a>
@@ -83,7 +83,7 @@ function About() {
                         rel="noreferrer"
                     >
                         <img 
-                            src="https://imgur.com/yActEWk" 
+                            src="https://res.cloudinary.com/drkesmfbk/image/upload/v1667972054/IMG_4727_g3soyz.heic" 
                             alt="GitHub logo"
                         />
                     </a>
