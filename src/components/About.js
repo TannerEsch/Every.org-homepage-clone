@@ -16,14 +16,13 @@ function About() {
                             src="https://res.cloudinary.com/drkesmfbk/image/upload/v1668048852/Screen_Shot_2022-11-09_at_6.50.29_PM_yowszk.png" 
                             alt="Sign-up form" 
                         />
-
-//                         <h2>
-//                             Look up your favorite organizations on the this page.
-//                         </h2>
-//                         <img 
-//                             //src="" 
-//                             alt="Overview page" 
-//                         />
+                         <h2>
+                            Look up your favorite organizations on the this page.
+                        </h2>
+                         <img 
+                            src="" 
+                            alt="Overview page" 
+                        />
 
 
                     </div>

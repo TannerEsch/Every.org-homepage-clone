@@ -10,7 +10,7 @@ function NonprofitsContainer(props) {
   // const [searchTerm, setSearchTerm] = useState('');
   
   useEffect(() => {
-    axios.get(`${REACT_APP_SERVER_URL}/nonprofits/:concern`, {
+    axios.get(`${REACT_APP_SERVER_URL}/nonprofits/results`, {
         Authorization: `Bearer ${token}`,
     })
     .then(response => {

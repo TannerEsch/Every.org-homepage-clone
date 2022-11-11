@@ -87,7 +87,7 @@ function App() {
           />
           <PrivateRoute path="/users" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
-          <Route path="/nonprofits/results" component={Nonprofits} />
+          <Route path="/nonprofits" component={Nonprofits} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} user={currentUser} handleLogout={handleLogout} />
         </Switch>
