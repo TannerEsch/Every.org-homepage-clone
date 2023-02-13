@@ -1,0 +1,73 @@
+.nav-bar-mine {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+     width: 100vw;
+    background-color: hsl(180, 6%, 19%);
+    height: 7rem;
+    box-shadow: 45vw 10px 120px 1px black;
+    
+}
+
+.dropdown-container{
+    color: #28a187;
+    margin-right: 100px;
+}
+
+.bottom-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+transform: translate(-20vw, -7vh);
+width: 250px;
+height: 250px;
+}
+
+.dropdown-icon {
+font-size: 1rem;
+color: white;
+    }
+
+.dropdown-icon:hover {
+background-color: hsl(180, 6%, 50%);
+border-radius: 20px;
+}
+
+
+.nav-search-bar>:nth-child(1){
+    margin-top: 5%;
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    border-radius: 1rem; 
+}
+
+
+.nav-signup .signup-nav {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-login {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav-signup {
+
+    background-color: #28a187;
+    border: none;
+    border-radius: 20px;
+}
+
+.no-auth-links {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    list-style-type:none;
+}

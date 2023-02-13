@@ -4,22 +4,17 @@ import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-d
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 
-
-// CSS
-import './App.css';
-
 // Components
 import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import UnauthorizedLinks from './components/UnauthorizedLinks';
 import Profile from './components/Profile';
-import Welcome from './components/Welcome';
 import Nonprofits from './components/Nonprofits';
-import Contact from './components/Contact';
+import Unauthorized from './Pages/Unauthorized';
 
-
+import './styles/app.css'
 // const axios = require('axios')
 // const apiKey = process.env.API_KEY;
 // const cors = require('cors')
@@ -41,7 +36,6 @@ function App() {
  
   useEffect(() => {
     let token;
-
     if (!localStorage.getItem('jwtToken')) {
       setIsAuthenticated(false);
       console.log('====> Authenticated is now FALSE');
@@ -52,12 +46,6 @@ function App() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   axios.get(`https://partners.every.org/v0.2/search/maps?apiKey=${apiKey}`)
-  //     .then((response) => {
-  //       console.log(response.data);
-  //     }).catch((err) => { console.log('****************ERROR', err) });
-  // }, []);
 
   const nowCurrentUser = (userData) => {
     console.log('===> nowCurrent is here.');
@@ -80,20 +68,19 @@ function App() {
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
         <Switch>
-          <Route path='/signup' component={Signup} />
-          <Route 
+          {/* <Route path='/signup' component={Signup} /> */}
+          {/* <Route 
             path="/login"
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
-          />
-          <PrivateRoute path="/users" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <Route exact path="/" component={Welcome} />
-          <Route path="/nonprofits" component={Nonprofits} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} user={currentUser} handleLogout={handleLogout} />
+          /> */}
+          {/* <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} /> */}
+          {isAuthenticated?<Route exact path="/" component={Home}/> : <Route exact path="/" component={Unauthorized}/>   }
+          {/* <Route path="/nonprofits" component={Nonprofits} /> */}
+          <Route path="/test" component={UnauthorizedLinks} />
         </Switch>
       </div>
-      <Footer />
     </div>
+    
     </Router>
   );
 }

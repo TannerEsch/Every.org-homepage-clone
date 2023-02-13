@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-const { REACT_APP_SERVER_URL } = process.env.REACT_APP_SERVER_URL;
+const { REACT_APP_SERVER_URL } = process.env;
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -70,7 +70,7 @@ const Signup = () => {
                             <label htmlFor="confirmPassword">Confirm Password</label>
                             <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control"/>
                         </div>
-                        <input onClick={handleSubmit} type="submit" className="btn btn-primary float-right" value="Submit"/>
+                        <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>
                 </div>
             </div>

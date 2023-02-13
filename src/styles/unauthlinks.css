@@ -1,0 +1,68 @@
+.unauthlink-container {
+    position: absolute;
+    background-color: hsl(180, 6%, 19%);
+    height: 100vh;
+    left: 10%;
+    top: 32%;
+}
+
+.views-select {
+    color: white;
+    
+}
+
+.views-select> * {
+    color: white;
+}
+
+.views-select> *:hover {
+    color: #27c4a2;
+    border-bottom: 2px solid; 
+    
+}
+
+.view1 h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.view1 h2 {
+    color: #E8A764;
+    font-size: 1.5rem;
+}
+
+.view1 h6 {
+    color: white;
+}
+
+.view1 p {
+    color: white;
+}
+
+.view1>:nth-child(6) {
+    color: #27c4a2;
+}
+
+.learn-btn {
+    background-color: #27c4a2;
+    color: white;
+    border-radius: 80px;
+    width: 8rem;
+    height: 3rem;
+}
+
+.views-select {
+    display: flex;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.google-btn {
+    width: 8rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 80px;
+}

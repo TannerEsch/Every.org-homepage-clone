@@ -1,0 +1,42 @@
+footer {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: hsl(180, 6%, 19%);
+    color: white;
+    box-shadow: 50vw 50px 200px 100px black;
+}
+
+footer > ul {
+display: flex;
+margin-top: 8px; 
+}
+
+
+footer li {
+    font-size: 0.8em;
+    list-style-type:circle;
+    margin-right: 1.5em;
+}
+
+footer li:nth-child(1){
+    list-style-type: none;
+    margin-left: 8%;
+}
+
+footer li:nth-child(n+11){
+    list-style-type: none;
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+footer li:nth-child(15) {
+    margin-right: 8em
+}
+
+
+li:nth-child(11) {
+    margin-left: auto;
+
+}

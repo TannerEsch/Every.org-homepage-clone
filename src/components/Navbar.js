@@ -1,75 +1,81 @@
-import React, { useState } from 'react';
-// import { NavLink, Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import { IconContext } from "react-icons";
-import { authNavbarData, noAuthNavbarData } from './NavbarData';
-import './Navbar.css';
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { IoIosArrowDown } from 'react-icons/io';
+import Divider from '@mui/material/Divider';
+import MenuItem from '@mui/material/MenuItem';
 
 const Navbar = (props) => {
 
-  const [sidebar, setSidebar] = useState(false);
 
-  const showSideBar = () => setSidebar(!sidebar);
+    return (
+     
+      <div className='navbar-container'>
+         {props.isAuth? <div style={{height:"10rem", backgroundColor:"hsl(180, 6%, 19%)"}}></div> : null}
+        <nav className="nav-bar-mine">
+                <Link className='nav-logo' to="/"><img className="logo" src='https://i.imgur.com/Py7RPO5.png'/></Link>
+                
+                
+                <div>
+                    <form className="nav-search-bar">
+                      <input type="search" placeholder='Search Nonprofits'></input>                    </form>
+                    {
+                        props.isAuth 
+                        ? <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <NavLink className="nav-link"  to="/profile">Profile</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <span onClick={props.handleLogout} >Logout</span>
+                            </li>
+                        </ul>
+                        : <ul class="no-auth-links">
+                            <li>
+                                <NavLink className='nav-login' style={{color: "#2CD7B0"}} to="">Log in</NavLink>
+                            </li>
+                             <li>
+                                <button class="nav-signup"><NavLink className="signup-nav" to="">Sign up</NavLink></button>
+                            </li>
+                            <li>
+                            <Dropdown style ={{border:'none'}}>
+      <Dropdown.Toggle variant=" failure"  id="dropdown-basic" style={{backgroundColor:"hsl(180, 6%, 19%)", color:"hsl(180, 6%, 19%)", position:"absolute", marginBottom:"1.8rem", border:" 1px hsl(180, 6%, 19%)", borderRadius:"none"}}>
+      <IoIosArrowDown className="dropdown-icon"/>
+      </Dropdown.Toggle>
 
-  return (
-    <div>
-      <IconContext.Provider value={{ className: 'openMenu' }} >
-        <div className='navbar'>
-          <Link className="navbar-brand" to="/">
-            <img className='genNavLogo' src={require('../images/genlogo.png')} alt='Generous Logo' />
-          </Link>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSideBar} />
-          </Link>
-        </div>
-      </IconContext.Provider>
-
-      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className='nav-menu-items' onClick={showSideBar}>
-          <li className='navbar-toggle'>
-            <IconContext.Provider value={{ className: 'closeMenu' }} >
-              <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose id='closeMenu' />
-              </Link>
-            </IconContext.Provider>
-          </li>
-          {
-            props.isAuth
-              ? <IconContext.Provider value={{ color: '#DAA520' }} >
-                {authNavbarData.map((item, index) => {
-                  return (
-                    <li key={index} className={item.cName}>
-                      <Link to={item.path}>
-                        {item.icon}
-                        <span>{item.title}</span>
-                      </Link>
-                    </li>
-                  )
-                })}
-                <div onClick={props.handleLogout} className='logoutBtn'>
-                  <AiIcons.AiOutlineLogout />
-                  <h3>Logout</h3>
-                </div>
-              </IconContext.Provider>
-              : <IconContext.Provider value={{ color: '#DAA520' }} >
-                {noAuthNavbarData.map((item, index) => {
-                  return (
-                    <li key={index} className={item.cName}>
-                      <Link to={item.path}>
-                        {item.icon}
-                        <span>{item.title}</span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </IconContext.Provider>
-          }
-        </ul>
-      </nav>
+      <Dropdown.Menu style={{marginTop:"2rem"}}>
+        <div className='dropdown-container'>
+      <MenuItem className='item1'>FAQ & Support</MenuItem>
+    <MenuItem >Gift cards</MenuItem>
+    <MenuItem >Donate to Every.org</MenuItem>
+    <Divider />
+    <MenuItem >About Every.org</MenuItem>
+    <MenuItem >For nonprofits</MenuItem>
+    <MenuItem >For donors</MenuItem>
+    <MenuItem >For developers</MenuItem>
+    <Divider />
+    <div className='bottom-menu'>
+    <MenuItem >Blog</MenuItem>
+    <MenuItem >Press</MenuItem>
+    <MenuItem >Feedback</MenuItem>
+    <MenuItem >Volunteer</MenuItem>
+    <MenuItem >Careers</MenuItem>
+    <MenuItem >Terms</MenuItem>
+    <MenuItem >Privacy</MenuItem>
     </div>
-  );
+    </div>
+      </Dropdown.Menu>
+    </Dropdown>
+                            </li>
+                          </ul>
+                        
+                    }  
+                            
+                    
+                </div>
+        </nav>
+        </div>
+        
+    );
 }
 
 export default Navbar;
