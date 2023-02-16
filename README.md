@@ -2,6 +2,10 @@ Initally began as a collaborative project with an entirely different goal which 
 -------------------
 Good learning experience, definitely help me to hone in on my understanding of CSS transitions, animations, pseudo elements & classes, as well as selectors.
 
+LINK
+-------------
+https://everyorg-homepage-clone.netlify.app/
+
 EVERY.ORGS PAGE
 ---------------
 ![every orgs page](https://user-images.githubusercontent.com/107972255/218395912-f8d0f88b-6fcf-4574-91e8-c6a71b4f485d.JPG)
