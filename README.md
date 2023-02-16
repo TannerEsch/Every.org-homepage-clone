@@ -2,7 +2,7 @@ Initally began as a collaborative project with an entirely different goal which 
 -------------------
 Good learning experience, definitely help me to hone in on my understanding of CSS transitions, animations, pseudo elements & classes, as well as selectors.
 
-LINK
+SEE SITE
 -------------
 https://everyorg-homepage-clone.netlify.app/
 
