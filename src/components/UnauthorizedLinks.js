@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { TbBuildingStore } from 'react-icons/tb';
 import {FcGoogle} from 'react-icons/fc';

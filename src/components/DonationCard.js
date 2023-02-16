@@ -6,17 +6,6 @@ import Avatar from '@mui/material/Avatar';
 
 
 const DonationCard = () => {
-
-    const fakeData = [{
-        avi: "/static/images/avatar/1.jpg",
-        name: "julian donated" + "$" + Math.round(parseInt(Math.random())),
-        comment: "really happy to be supporting such an amazing cause",
-        company: "Saint Jude",
-        location: "Haiti, SA",
-        description: "We deal in helping children in need"
-
-    }]
-
     
     return (
         <div className='donation-card-container'>

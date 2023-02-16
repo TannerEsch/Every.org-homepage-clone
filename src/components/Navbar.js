@@ -19,17 +19,7 @@ const Navbar = (props) => {
                 <div>
                     <form className="nav-search-bar">
                       <input type="search" placeholder='Search Nonprofits'></input>                    </form>
-                    {
-                        props.isAuth 
-                        ? <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/profile">Profile</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <span onClick={props.handleLogout} >Logout</span>
-                            </li>
-                        </ul>
-                        : <ul class="no-auth-links">
+ <ul class="no-auth-links">
                             <li>
                                 <NavLink className='nav-login' style={{color: "#2CD7B0"}} to="">Log in</NavLink>
                             </li>
@@ -68,7 +58,6 @@ const Navbar = (props) => {
                             </li>
                           </ul>
                         
-                    }  
                             
                     
                 </div>
